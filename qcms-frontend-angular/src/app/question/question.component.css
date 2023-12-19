@@ -1,0 +1,114 @@
+/*
+
+.question-wrapper {
+  margin: 0 auto;
+  width: 70%;
+}
+.question-wrapper form{
+  display: flex;
+  flex-wrap: wrap;
+}
+.question-wrapper form h3{
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  justify-content: space-between;
+}
+.question-wrapper form label{
+  width: 49%;
+  display: flex;
+}
+.question-wrapper form label input{
+  margin-left: 20px;
+}
+.question-wrapper form button{
+  margin-top: 10px;
+}
+fieldset{
+  border: 3px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.bottom-form{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.bottom-form p{
+  margin: 0;
+}
+.correct{
+  border: 3px solid green;
+}
+.incorrect{
+  border: 3px solid red;
+}
+*/
+
+/* Style du conteneur principal */
+.question-wrapper {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style du fieldset */
+fieldset {
+    border: 2px solid #002244;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/* Style des labels et des inputs radio */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #002244;
+  padding: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Style du bouton de soumission */
+button[type="submit"] {
+    background-color: #002244;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #001933;
+}
+
+/* Style du message d'information */
+p {
+    color: #002244;
+    font-style: italic;
+}
+label{
+  display: flex;
+}
+.answer-input{
+  margin-left: 20px;
+}
+.message{
+  margin-left: auto;
+}
+.correct{
+  background-color: #4caf50;
+}
+.incorrect{
+  background-color: #f44336;
+}

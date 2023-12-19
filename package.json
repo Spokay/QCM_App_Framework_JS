@@ -1,0 +1,18 @@
+{
+  "name": "qcm_app_angular_express",
+  "version": "1.0.0",
+  "description": "rendu du projet QCM avec Angular et Express",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "cd ./qcms-backend-express && npm install && cd ../qcms-frontend-angular && npm install",
+    "start-backend": "node ./qcms-backend-express/index.js",
+    "start-frontend": "cd ./qcms-frontend-angular && ng serve --open",
+    "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

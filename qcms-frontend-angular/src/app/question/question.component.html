@@ -1,0 +1,22 @@
+
+  <div class="question-wrapper">
+    <fieldset>
+      <form [formGroup]="questionForm" (ngSubmit)="answerQuestion()">
+        <h3>{{question?.title}}</h3>
+        <div formArrayName="answers" #answerContainer>
+          <label *ngFor="let answer of question?.answers;let i = index">
+            {{answer.name}}
+            <input type="checkbox" formControlName="{{i}}" class="answer-input">
+            <span class="message"></span>
+          </label>
+        </div>
+
+        <div class="bottom-form">
+           <button type="submit">Répondre</button>
+          <p>{{message}}</p>
+        </div>
+      </form>
+
+
+    </fieldset>
+  </div>

@@ -1,0 +1,43 @@
+ <form [formGroup]="qcmForm" (ngSubmit)="onSubmit()" class="creation-form">
+   <h2>Création d'un QCM</h2>
+    <label for="name">
+      Nom du qcm:
+      <input type="text" id="name" name="name" formControlName="name">
+    </label>
+    <label for="theme">
+      Theme du qcm :
+      <input type="text" id="theme" name="theme" formControlName="theme">
+    </label>
+
+    <div formArrayName="questions" class="question-container">
+      <h3>Questions</h3>
+      <div *ngFor="let question of questions().controls; let qi=index" [formGroupName]="qi">
+        Question {{qi + 1}} :
+        <button type="button" (click)="removeQuestion(qi)">-</button>
+        <label>
+            Enoncé de la question :
+            <input type="text" formControlName="name">
+        </label>
+        <div formArrayName="answers" class="answer-container">
+          <h4>Réponses</h4>
+          <div *ngFor="let answer of answers(qi).controls; let ai=index" [formGroupName]="ai">
+            <label>
+              Réponse {{ai + 1}} :
+              <button type="button" (click)="removeAnswer(qi, ai)" class="btn">-</button>
+              <input type="text" formControlName="name">
+            </label>
+            <label>
+              Réponse correcte ?
+              <input type="checkbox" formControlName="isCorrect">
+            </label>
+          </div>
+          <button type="button" (click)="addAnswer(qi)" class="btn">+</button>
+        </div>
+      </div>
+      <button type="button" (click)="addQuestion()" class="btn">+</button>
+    </div>
+
+    <button type="submit">Valider</button>
+
+  </form>
+

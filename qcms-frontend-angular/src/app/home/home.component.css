@@ -1,0 +1,42 @@
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;justify-content: space-evenly;
+  padding: 10px;
+  background-color: #002244;
+  color: white;
+  margin: 10px;
+  /*max-width: 300px;*/
+  width: 80%;
+  border-radius: 4px;
+}
+.card a{
+  text-align: center;
+  color: #002244;
+    text-decoration: none;
+  background-color: #fff;
+  padding: 10px;
+  margin: 5px;
+  transition: 0.3s ease;
+  border-radius: 4px;
+}
+.card a:hover{
+  background-color: #002244;
+  color: #fff;
+}
+@media screen and (min-width: 600px) {
+  .wrapper{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .card{
+    width: 40%;
+  }
+}

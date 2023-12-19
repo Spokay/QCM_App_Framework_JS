@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/normalize.css";
+@import url('https://fonts.googleapis.com/css?family=Arial:300,400,500');
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}

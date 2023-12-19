@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <div class="card" *ngFor="let qcm of qcms;trackBy:trackById">
+  <h2>{{qcm.name}}</h2>
+  <p>Theme: {{qcm.theme}}</p>
+  <a href="/qcm/{{qcm.id}}">Jouer</a>
+</div>
+</div>
+
+

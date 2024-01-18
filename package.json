@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "cd ./qcms-backend-express && npm install && cd ../qcms-frontend-angular && npm install",
     "start-backend": "node ./qcms-backend-express/index.js",
-    "start-frontend": "cd ./qcms-frontend-angular && npm run build && serve:ssr:qcms-front-end",
+    "start-frontend": "cd ./qcms-frontend-angular && npm run build && npm run serve:ssr:qcms-front-end",
     "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
